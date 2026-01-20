@@ -4,10 +4,22 @@
       "official_name": "LibreChat",
       "description": "LibreChat MCP client."
     },
+    "claude-code": {
+      "official_name": "Claude Code",
+      "owner": "Anthropic",
+      "description": "Claude Code MCP client."
+    },
     "claude-ai": {
       "official_name": "Claude Desktop",
       "owner": "Anthropic",
-      "description": "Claude Desktop MCP client."
+      "description": "Claude Desktop MCP client.",
+      "aliases": [
+        "claude-desktop"
+      ]
+    },
+    "Cline": {
+      "official_name": "Cline",
+      "description": "Cline VS Code extension MCP client."
     },
     "continue-client": {
       "official_name": "Continue",
@@ -24,8 +36,8 @@
         "vscode-fork"
       ],
       "aliases": [
-        "cursor",
-        "Cursor"
+        "Cursor",
+        "cursor"
       ]
     },
     "emacs": {
@@ -38,6 +50,11 @@
     "example-client": {
       "official_name": "Example Client",
       "description": "Default client name used in Node.js examples."
+    },
+    "gemini-cli": {
+      "official_name": "Gemini CLI",
+      "owner": "Google",
+      "description": "Gemini CLI MCP client (assumed name)."
     },
     "goose": {
       "official_name": "Goose",
@@ -60,9 +77,12 @@
       "official_name": "Python SDK default",
       "description": "Default client name from the MCP Python SDK."
     },
-    "mcp-cli-client": {
+    "mcp-cli": {
       "official_name": "MCP CLI",
-      "description": "Default MCP CLI client name."
+      "description": "Generic MCP command-line client.",
+      "aliases": [
+        "mcp-cli-client"
+      ]
     },
     "mcs": {
       "official_name": "Copilot Studio",
@@ -76,6 +96,15 @@
     "my-awesome-client": {
       "official_name": "Go SDK example",
       "description": "Placeholder client name used in Go SDK documentation."
+    },
+    "q-cli": {
+      "official_name": "Amazon Q CLI",
+      "owner": "Amazon",
+      "description": "Amazon Q CLI MCP client (assumed name)."
+    },
+    "Roo Code": {
+      "official_name": "Roo Code",
+      "description": "Roo Code VS Code extension MCP client (unconfirmed name)."
     },
     "spring-ai-mcp-client": {
       "official_name": "Spring AI MCP Client",

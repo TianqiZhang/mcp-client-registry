@@ -10,20 +10,25 @@ A community-maintained map of MCP `clientinfo.name` values to official client na
 | clientinfo.name | official_name | owner | website |
 | --- | --- | --- | --- |
 | @librechat/api-client | LibreChat |  |  |
-| claude-ai | Claude Desktop | Anthropic |  |
+| claude-code | Claude Code | Anthropic |  |
+| claude-desktop | Claude Desktop | Anthropic |  |
+| Cline | Cline |  |  |
 | continue-client | Continue |  |  |
-| cursor-vscode | Cursor | Anysphere | [https://www.cursor.com](https://www.cursor.com) |
+| Cursor | Cursor | Anysphere | [https://www.cursor.com](https://www.cursor.com) |
 | emacs | Emacs |  |  |
 | example-client | Example Client |  |  |
+| gemini-cli | Gemini CLI | Google |  |
 | goose | Goose |  |  |
 | helix | Helix |  |  |
 | jetbrains-ai-assistant-client | JetBrains AI Assistant | JetBrains |  |
 | JetBrains-IU/copilot-intellij | GitHub Copilot for IntelliJ |  |  |
 | mcp | Python SDK default |  |  |
-| mcp-cli-client | MCP CLI |  |  |
+| mcp-cli | MCP CLI |  |  |
 | mcs | Copilot Studio | Microsoft |  |
 | mise | Mise |  |  |
 | my-awesome-client | Go SDK example |  |  |
+| q-cli | Amazon Q CLI | Amazon |  |
+| Roo Code | Roo Code |  |  |
 | spring-ai-mcp-client | Spring AI MCP Client |  |  |
 | test-client | Smithery test client |  |  |
 | Visual Studio Code | Visual Studio Code | Microsoft |  |
