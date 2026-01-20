@@ -1,31 +1,79 @@
-﻿# MCP Clients Registry
+# MCP Clients Registry
 
-This repo maps MCP `clientinfo.name` values to official client names and metadata.
+A community-maintained map of MCP `clientinfo.name` values to official client names and metadata. Use it to identify clients behind unfamiliar names and improve reporting and insights.
 
-## Data file
+## Data format
 
-`clients.json` contains a single JSON object with one field:
+All data lives in `clients.json`. The top-level object contains a single field:
 
 - `clients`: Map of `clientinfo.name` -> metadata object
 
+Example:
+
+```json
+{
+  "clients": {
+    "cursor-vscode": {
+      "official_name": "Cursor",
+      "owner": "Anysphere",
+      "website": "https://www.cursor.com",
+      "description": "AI-powered coding IDE based on VS Code.",
+      "tags": ["coding-agent", "ide", "vscode-fork"],
+      "aliases": ["cursor", "Cursor"]
+    }
+  }
+}
+```
+
 ### Client object fields
 
-- `official_name` (string)
-- `owner` (string)
-- `website` (string URL)
-- `description` (string)
-- `aliases` (array of strings)
-- `tags` (array of strings)
+- `official_name` (string, required)
+- `owner` (string, optional)
+- `website` (string URL, optional)
+- `description` (string, optional)
+- `aliases` (array of strings, optional)
+- `tags` (array of strings, optional)
 
-All fields except `official_name` are optional. New entries should keep the key in `clients` equal to the MCP `clientinfo.name`.
+The key under `clients` must equal the MCP `clientinfo.name`. If a client has other known names, list them in `aliases`.
 
 ## Contributing
 
 1. Add or update an entry in `clients.json`.
 2. Keep entries in alphabetical order by key.
 3. Prefer official sources for `website`.
+4. Only add aliases that are known to appear in the wild.
+
+## Known clients
+
+<!-- BEGIN CLIENTS TABLE -->
+
+| clientinfo.name | official_name | owner | website |
+| --- | --- | --- | --- |
+| @librechat/api-client | LibreChat |  |  |
+| claude-ai | Claude Desktop | Anthropic |  |
+| continue-client | Continue |  |  |
+| cursor-vscode | Cursor | Anysphere | [https://www.cursor.com](https://www.cursor.com) |
+| emacs | Emacs |  |  |
+| example-client | Example Client |  |  |
+| goose | Goose |  |  |
+| helix | Helix |  |  |
+| jetbrains-ai-assistant-client | JetBrains AI Assistant | JetBrains |  |
+| JetBrains-IU/copilot-intellij | GitHub Copilot for IntelliJ |  |  |
+| mcp | Python SDK default |  |  |
+| mcp-cli-client | MCP CLI |  |  |
+| mcs | Copilot Studio | Microsoft |  |
+| mise | Mise |  |  |
+| my-awesome-client | Go SDK example |  |  |
+| spring-ai-mcp-client | Spring AI MCP Client |  |  |
+| test-client | Smithery test client |  |  |
+| Visual Studio Code | Visual Studio Code | Microsoft |  |
+| warp | Warp |  |  |
+| Windsurf | Windsurf | Codeium |  |
+| Zed | Zed |  |  |
+
+<!-- END CLIENTS TABLE -->
 
 ## Maintenance script
 
-Run `node clients.mjs` to validate `clients.json` and sort entries.
-Run `node clients.mjs --add` to add a new client entry interactively.
+- Validate and sort: `node clients.mjs`
+- Add a new entry interactively: `node clients.mjs --add`

@@ -2,6 +2,7 @@ import { readFile, writeFile } from "node:fs/promises";
 import { createInterface } from "node:readline/promises";
 
 const CLIENTS_PATH = new URL("clients.json", import.meta.url);
+const README_PATH = new URL("README.md", import.meta.url);
 const REQUIRED_FIELDS = ["official_name"];
 const KNOWN_FIELDS = new Set([
   "official_name",
@@ -76,6 +77,57 @@ function sortClients(clients) {
     sorted[key] = clients[key];
   }
   return sorted;
+}
+
+function escapeTableValue(value) {
+  return value.replace(/\|/g, "\\|");
+}
+
+function buildClientsTable(clients) {
+  const lines = [];
+  lines.push("| clientinfo.name | official_name | owner | website |");
+  lines.push("| --- | --- | --- | --- |");
+
+  for (const key of Object.keys(clients).sort((a, b) => a.localeCompare(b))) {
+    const entry = clients[key];
+    const officialName = entry.official_name ?? "";
+    const owner = entry.owner ?? "";
+    const website = entry.website ? `[${entry.website}](${entry.website})` : "";
+
+    lines.push(
+      `| ${escapeTableValue(key)} | ${escapeTableValue(officialName)} | ${escapeTableValue(owner)} | ${escapeTableValue(website)} |`
+    );
+  }
+
+  return lines.join("\n");
+}
+
+async function updateReadme(clients) {
+  let readme;
+  try {
+    readme = await readFile(README_PATH, "utf8");
+  } catch {
+    return;
+  }
+
+  readme = readme.replace(/^\uFEFF/, "");
+  const startMarker = "<!-- BEGIN CLIENTS TABLE -->";
+  const endMarker = "<!-- END CLIENTS TABLE -->";
+  const startIndex = readme.indexOf(startMarker);
+  const endIndex = readme.indexOf(endMarker);
+
+  if (startIndex === -1 || endIndex === -1 || endIndex < startIndex) {
+    return;
+  }
+
+  const table = buildClientsTable(clients);
+  const before = readme.slice(0, startIndex + startMarker.length);
+  const after = readme.slice(endIndex);
+  const updated = `${before}\n\n${table}\n\n${after}`;
+
+  if (updated !== readme) {
+    await writeFile(README_PATH, updated, "utf8");
+  }
 }
 
 async function loadClients() {
@@ -197,4 +249,5 @@ for (const [key, entry] of Object.entries(data.clients)) {
 }
 
 await writeClients(data, raw);
+await updateReadme(data.clients);
 console.log("clients.json is valid and sorted.");
