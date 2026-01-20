@@ -31,8 +31,7 @@ A community-maintained map of MCP `clientinfo.name` values to official client na
 | emacs | Emacs |  |  |
 | example-client | Example Client |  |  |
 | factory-cli | Factory CLI |  | [https://github.com/factory-ai/factory-cli](https://github.com/factory-ai/factory-cli) |
-| gemini-cli | Gemini CLI | Google |  |
-| gemini-cli-mcp-client | Gemini CLI |  | [https://geminicli.com/](https://geminicli.com/) |
+| gemini-cli | Gemini CLI | Google | [https://geminicli.com/](https://geminicli.com/) |
 | gitguardian | GitGuardian |  | [https://www.gitguardian.com](https://www.gitguardian.com) |
 | github-copilot-developer | GitHub Copilot CLI |  | [https://github.com/features/copilot/cli](https://github.com/features/copilot/cli) |
 | goose | Goose |  | [https://block.github.io/goose](https://block.github.io/goose) |
@@ -53,10 +52,8 @@ A community-maintained map of MCP `clientinfo.name` values to official client na
 | my-awesome-client | Go SDK example |  |  |
 | opencode | Opencode |  | [https://opencode.ai](https://opencode.ai) |
 | Postman-Client | Postman |  | [https://postman.com/downloads](https://postman.com/downloads) |
-| q-cli | Amazon Q CLI | Amazon |  |
-| Q-DEV-CLI | Amazon Q Developer CLI |  | [https://github.com/aws/amazon-q-developer-cli](https://github.com/aws/amazon-q-developer-cli) |
+| q-cli | Amazon Q CLI | Amazon | [https://github.com/aws/amazon-q-developer-cli](https://github.com/aws/amazon-q-developer-cli) |
 | Roo Code | Roo Code |  |  |
-| Roo-Code | Roo Code |  | [https://roocode.com](https://roocode.com) |
 | spring-ai-mcp-client | Spring AI MCP Client |  |  |
 | test-client | Smithery test client |  |  |
 | Visual Studio Code | Visual Studio Code | Microsoft | [https://code.visualstudio.com](https://code.visualstudio.com) |

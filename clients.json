@@ -117,10 +117,10 @@
     "gemini-cli": {
       "official_name": "Gemini CLI",
       "owner": "Google",
-      "description": "Gemini CLI MCP client (assumed name)."
-    },
-    "gemini-cli-mcp-client": {
-      "official_name": "Gemini CLI",
+      "aliases": [
+        "gemini-cli-mcp-client"
+      ],
+      "description": "Gemini CLI MCP client (assumed name).",
       "website": "https://geminicli.com/"
     },
     "gitguardian": {
@@ -129,6 +129,7 @@
     },
     "github-copilot-developer": {
       "official_name": "GitHub Copilot CLI",
+      "description": "GitHub Copilot CLI, and GitHub Copilot Coding Agent in github.com.",
       "website": "https://github.com/features/copilot/cli"
     },
     "goose": {
@@ -211,20 +212,19 @@
     },
     "q-cli": {
       "official_name": "Amazon Q CLI",
+      "aliases": [
+        "Q-DEV-CLI"
+      ],
       "owner": "Amazon",
-      "description": "Amazon Q CLI MCP client (assumed name)."
-    },
-    "Q-DEV-CLI": {
-      "official_name": "Amazon Q Developer CLI",
+      "description": "Amazon Q CLI MCP client (assumed name).",
       "website": "https://github.com/aws/amazon-q-developer-cli"
     },
     "Roo Code": {
       "official_name": "Roo Code",
+      "aliases": [
+        "Roo-Code"
+      ],
       "description": "Roo Code VS Code extension MCP client (unconfirmed name)."
-    },
-    "Roo-Code": {
-      "official_name": "Roo Code",
-      "website": "https://roocode.com"
     },
     "spring-ai-mcp-client": {
       "official_name": "Spring AI MCP Client",
