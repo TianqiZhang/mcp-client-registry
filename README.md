@@ -109,3 +109,21 @@ The key under `clients` must equal the MCP `clientinfo.name`. If a client has ot
 
 - Validate and sort: `node clients.mjs`
 - Add a new entry interactively: `node clients.mjs --add`
+
+## npm package
+
+```js
+const { getMCPClient, mcpClients } = require("mcp-client-registry");
+
+const client = getMCPClient("cursor-vscode");
+if (client) {
+  console.log(client.official_name);
+}
+
+console.log(Object.keys(mcpClients).length);
+```
+
+`getMCPClient(name)` matches both canonical keys and known aliases.
+
+Package source lives in `packages/node`.
+`clients.json` for the npm package is generated via `packages/node/scripts/sync-clients.mjs`.

@@ -163,6 +163,7 @@ async function writeClients(data, previousRaw) {
   if (output !== previousRaw) {
     await writeFile(CLIENTS_PATH, output, "utf8");
   }
+
 }
 
 async function promptForEntry(existingKeys) {

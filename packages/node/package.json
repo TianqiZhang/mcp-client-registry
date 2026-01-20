@@ -1,0 +1,29 @@
+{
+  "name": "mcp-client-registry",
+  "version": "0.1.0",
+  "description": "Community registry of MCP clientInfo.name values mapped to official client names and metadata.",
+  "license": "MIT",
+  "author": "MCP Client Registry contributors",
+  "main": "index.js",
+  "types": "index.d.ts",
+  "files": [
+    "clients.json",
+    "index.js",
+    "index.d.ts",
+    "README.md"
+  ],
+  "scripts": {
+    "prepare": "node ./scripts/sync-clients.mjs"
+  },
+  "keywords": [
+    "mcp",
+    "mcp-client",
+    "model-context-protocol",
+    "registry",
+    "clientInfo",
+    "metadata"
+  ],
+  "publishConfig": {
+    "access": "public"
+  }
+}
