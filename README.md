@@ -1,5 +1,7 @@
 # MCP Clients Registry
 
+[![npm version](https://img.shields.io/npm/v/mcp-client-registry.svg)](https://www.npmjs.com/package/mcp-client-registry)
+
 A community-maintained map of MCP `clientinfo.name` values to official client names and metadata. Use it to identify clients behind unfamiliar names and improve reporting and insights.
 
 
