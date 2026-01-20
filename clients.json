@@ -1,0 +1,113 @@
+{
+  "clients": {
+    "@librechat/api-client": {
+      "official_name": "LibreChat",
+      "description": "LibreChat MCP client."
+    },
+    "claude-ai": {
+      "official_name": "Claude Desktop",
+      "owner": "Anthropic",
+      "description": "Claude Desktop MCP client."
+    },
+    "continue-client": {
+      "official_name": "Continue",
+      "description": "Continue MCP client."
+    },
+    "cursor-vscode": {
+      "official_name": "Cursor",
+      "owner": "Anysphere",
+      "website": "https://www.cursor.com",
+      "description": "AI-powered coding IDE based on VS Code.",
+      "tags": [
+        "coding-agent",
+        "ide",
+        "vscode-fork"
+      ],
+      "aliases": [
+        "cursor",
+        "Cursor"
+      ]
+    },
+    "emacs": {
+      "official_name": "Emacs",
+      "description": "Emacs MCP client (lsp-mode or Eglot).",
+      "aliases": [
+        "Eglot"
+      ]
+    },
+    "example-client": {
+      "official_name": "Example Client",
+      "description": "Default client name used in Node.js examples."
+    },
+    "goose": {
+      "official_name": "Goose",
+      "description": "Goose autonomous agent MCP client."
+    },
+    "helix": {
+      "official_name": "Helix",
+      "description": "Helix editor MCP client."
+    },
+    "jetbrains-ai-assistant-client": {
+      "official_name": "JetBrains AI Assistant",
+      "owner": "JetBrains",
+      "description": "JetBrains AI Assistant MCP client."
+    },
+    "JetBrains-IU/copilot-intellij": {
+      "official_name": "GitHub Copilot for IntelliJ",
+      "description": "Copilot MCP client running inside IntelliJ-based IDEs."
+    },
+    "mcp": {
+      "official_name": "Python SDK default",
+      "description": "Default client name from the MCP Python SDK."
+    },
+    "mcp-cli-client": {
+      "official_name": "MCP CLI",
+      "description": "Default MCP CLI client name."
+    },
+    "mcs": {
+      "official_name": "Copilot Studio",
+      "description": "Microsoft's low-code platform for building custom AI assistants and conversational agents that integrate with enterprise data and services.",
+      "owner": "Microsoft"
+    },
+    "mise": {
+      "official_name": "Mise",
+      "description": "Mise CLI MCP client."
+    },
+    "my-awesome-client": {
+      "official_name": "Go SDK example",
+      "description": "Placeholder client name used in Go SDK documentation."
+    },
+    "spring-ai-mcp-client": {
+      "official_name": "Spring AI MCP Client",
+      "description": "Default client name for Spring AI MCP client starter."
+    },
+    "test-client": {
+      "official_name": "Smithery test client",
+      "description": "Automated test/health-check client name used by Smithery."
+    },
+    "Visual Studio Code": {
+      "official_name": "Visual Studio Code",
+      "owner": "Microsoft",
+      "description": "VS Code MCP client.",
+      "aliases": [
+        "Visual Studio Code - Insiders"
+      ]
+    },
+    "warp": {
+      "official_name": "Warp",
+      "description": "Warp terminal MCP client."
+    },
+    "Windsurf": {
+      "official_name": "Windsurf",
+      "owner": "Codeium",
+      "description": "Windsurf IDE MCP client."
+    },
+    "Zed": {
+      "official_name": "Zed",
+      "description": "Zed editor MCP client.",
+      "aliases": [
+        "zed"
+      ]
+    }
+  }
+}

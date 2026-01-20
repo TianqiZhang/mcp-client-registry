@@ -1,0 +1,200 @@
+import { readFile, writeFile } from "node:fs/promises";
+import { createInterface } from "node:readline/promises";
+
+const CLIENTS_PATH = new URL("clients.json", import.meta.url);
+const REQUIRED_FIELDS = ["official_name"];
+const KNOWN_FIELDS = new Set([
+  "official_name",
+  "owner",
+  "website",
+  "description",
+  "tags",
+  "aliases",
+]);
+
+function fail(message) {
+  console.error(message);
+  process.exit(1);
+}
+
+function isPlainObject(value) {
+  return value !== null && typeof value === "object" && !Array.isArray(value);
+}
+
+function validateClientEntry(key, entry) {
+  if (!isPlainObject(entry)) {
+    fail(`Client "${key}" must be an object.`);
+  }
+
+  for (const field of REQUIRED_FIELDS) {
+    if (typeof entry[field] !== "string" || entry[field].trim() === "") {
+      fail(`Client "${key}" is missing required field "${field}".`);
+    }
+  }
+
+  if ("owner" in entry && (typeof entry.owner !== "string" || entry.owner.trim() === "")) {
+    fail(`Client "${key}" has invalid "owner".`);
+  }
+
+  if ("website" in entry && (typeof entry.website !== "string" || entry.website.trim() === "")) {
+    fail(`Client "${key}" has invalid "website".`);
+  }
+
+  if (
+    "description" in entry &&
+    (typeof entry.description !== "string" || entry.description.trim() === "")
+  ) {
+    fail(`Client "${key}" has invalid "description".`);
+  }
+
+  if ("tags" in entry) {
+    if (!Array.isArray(entry.tags) || entry.tags.some((tag) => typeof tag !== "string" || tag.trim() === "")) {
+      fail(`Client "${key}" has invalid "tags".`);
+    }
+  }
+
+  if ("aliases" in entry) {
+    if (
+      !Array.isArray(entry.aliases) ||
+      entry.aliases.some((alias) => typeof alias !== "string" || alias.trim() === "")
+    ) {
+      fail(`Client "${key}" has invalid "aliases".`);
+    }
+  }
+
+  for (const field of Object.keys(entry)) {
+    if (!KNOWN_FIELDS.has(field)) {
+      console.warn(`Warning: client "${key}" has unknown field "${field}".`);
+    }
+  }
+}
+
+function sortClients(clients) {
+  const sortedKeys = Object.keys(clients).sort((a, b) => a.localeCompare(b));
+  const sorted = {};
+  for (const key of sortedKeys) {
+    sorted[key] = clients[key];
+  }
+  return sorted;
+}
+
+async function loadClients() {
+  let raw = await readFile(CLIENTS_PATH, "utf8");
+  raw = raw.replace(/^\uFEFF/, "");
+  let data;
+  try {
+    data = JSON.parse(raw);
+  } catch (error) {
+    fail(`clients.json is not valid JSON: ${error.message}`);
+  }
+
+  if (!isPlainObject(data)) {
+    fail("clients.json must contain a JSON object.");
+  }
+
+  if (!("clients" in data) || !isPlainObject(data.clients)) {
+    fail('clients.json must contain a "clients" object.');
+  }
+
+  for (const [key, entry] of Object.entries(data.clients)) {
+    if (typeof key !== "string" || key.trim() === "") {
+      fail("Client keys must be non-empty strings.");
+    }
+    validateClientEntry(key, entry);
+  }
+
+  return { data, raw };
+}
+
+async function writeClients(data, previousRaw) {
+  const output = `${JSON.stringify(data, null, 2)}\n`;
+  if (output !== previousRaw) {
+    await writeFile(CLIENTS_PATH, output, "utf8");
+  }
+}
+
+async function promptForEntry(existingKeys) {
+  const rl = createInterface({ input: process.stdin, output: process.stdout });
+  try {
+    console.log("Enter a new MCP client entry.");
+    const key = (await rl.question("clientinfo.name (key): ")).trim();
+    if (!key) {
+      fail("clientinfo.name cannot be empty.");
+    }
+
+    if (existingKeys.has(key)) {
+      const overwrite = (await rl.question(`"${key}" exists. Overwrite? (y/N): `)).trim().toLowerCase();
+      if (overwrite !== "y" && overwrite !== "yes") {
+        fail("Aborted.");
+      }
+    }
+
+    console.log('official_name: The official product or client name (required).');
+    const officialName = (await rl.question("official_name: ")).trim();
+    if (!officialName) {
+      fail("official_name is required.");
+    }
+
+    console.log('owner: The company or organization behind the client (optional).');
+    const owner = (await rl.question("owner (optional): ")).trim();
+
+    console.log('website: Official website URL (optional).');
+    const website = (await rl.question("website (optional): ")).trim();
+
+    console.log('description: Short description of the client (optional).');
+    const description = (await rl.question("description (optional): ")).trim();
+
+    console.log('tags: Comma-separated tags (optional).');
+    const tagsRaw = (await rl.question("tags (comma-separated, optional): ")).trim();
+    const tags = tagsRaw
+      ? tagsRaw.split(",").map((tag) => tag.trim()).filter(Boolean)
+      : [];
+
+    console.log('aliases: Other known clientinfo.name values for the same client (optional).');
+    const aliasesRaw = (await rl.question("aliases (comma-separated, optional): ")).trim();
+    const aliases = aliasesRaw
+      ? aliasesRaw.split(",").map((alias) => alias.trim()).filter(Boolean)
+      : [];
+
+    const entry = {
+      official_name: officialName,
+      ...(owner ? { owner } : {}),
+      ...(website ? { website } : {}),
+      ...(description ? { description } : {}),
+      ...(tags.length ? { tags } : {}),
+      ...(aliases.length ? { aliases } : {}),
+    };
+
+    return { key, entry };
+  } finally {
+    rl.close();
+  }
+}
+
+const args = process.argv.slice(2);
+const addMode = args.includes("--add");
+const helpMode = args.includes("--help") || args.includes("-h");
+
+if (helpMode) {
+  console.log("Usage: node clients.mjs [--add]");
+  process.exit(0);
+}
+
+if (args.length && !addMode) {
+  fail(`Unknown arguments: ${args.join(" ")}`);
+}
+
+const { data, raw } = await loadClients();
+
+if (addMode) {
+  const { key, entry } = await promptForEntry(new Set(Object.keys(data.clients)));
+  data.clients[key] = entry;
+}
+
+data.clients = sortClients(data.clients);
+for (const [key, entry] of Object.entries(data.clients)) {
+  validateClientEntry(key, entry);
+}
+
+await writeClients(data, raw);
+console.log("clients.json is valid and sorted.");
