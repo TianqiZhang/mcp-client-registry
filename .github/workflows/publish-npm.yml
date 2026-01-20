@@ -26,7 +26,5 @@ jobs:
         working-directory: packages/node
 
       - name: Publish
-        run: npm publish --access public
+        run: npm publish --provenance --access public
         working-directory: packages/node
-        env:
-          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
