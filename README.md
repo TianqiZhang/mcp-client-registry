@@ -15,6 +15,8 @@ A community-maintained map of MCP `clientinfo.name` values to official client na
 | @n8n/n8n-nodes-langchain.mcpClientTool | N8N MCP Client |  | [https://n8n.io](https://n8n.io) |
 | Alpic | Alpic |  | [https://alpic.ai](https://alpic.ai) |
 | amp-mcp-client | AmpCode |  | [https://ampcode.com](https://ampcode.com) |
+| Anthropic/API | Anthropic API | Anthropic | [https://platform.claude.com/](https://platform.claude.com/) |
+| Anthropic/ClaudeAI | Claude.ai | Anthropic | [https://claude.ai](https://claude.ai) |
 | antigravity-client | Google Antigravity |  | [https://antigravity.google](https://antigravity.google) |
 | apify-mcp-client | Apify MCP Client |  | [https://apify.com/jiri.spilka/tester-mcp-client](https://apify.com/jiri.spilka/tester-mcp-client) |
 | arcade | Arcade |  | [https://arcade.dev](https://arcade.dev) |
@@ -23,6 +25,7 @@ A community-maintained map of MCP `clientinfo.name` values to official client na
 | claude-ai | Claude Desktop | Anthropic | [https://claude.ai](https://claude.ai) |
 | claude-code | Claude Code | Anthropic | [https://claude.com/product/claude-code](https://claude.com/product/claude-code) |
 | Cline | Cline |  | [https://cline.bot/](https://cline.bot/) |
+| CodeRabbit | CodeRabbit | CodeRabbit | [https://www.coderabbit.ai/](https://www.coderabbit.ai/) |
 | Codex | OpenAI Codex |  | [https://openai.com/codex](https://openai.com/codex) |
 | com.raycast.macos | Raycast |  | [https://www.raycast.com](https://www.raycast.com) |
 | continue-cli-client | Continue CLI Client |  | [https://www.continue.dev/](https://www.continue.dev/) |
@@ -52,6 +55,7 @@ A community-maintained map of MCP `clientinfo.name` values to official client na
 | mise | Mise |  |  |
 | Mistral | Mistral AI: Le Chat |  | [https://chat.mistral.ai](https://chat.mistral.ai) |
 | my-awesome-client | Go SDK example |  |  |
+| openai-mcp | OpenAI/ChatGPT MCP connector | OpenAI | [https://openai.com/](https://openai.com/) |
 | opencode | Opencode |  | [https://opencode.ai](https://opencode.ai) |
 | Postman-Client | Postman |  | [https://postman.com/downloads](https://postman.com/downloads) |
 | q-cli | Amazon Q CLI | Amazon | [https://github.com/aws/amazon-q-developer-cli](https://github.com/aws/amazon-q-developer-cli) |

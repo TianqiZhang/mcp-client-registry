@@ -17,6 +17,18 @@
       "official_name": "AmpCode",
       "website": "https://ampcode.com"
     },
+    "Anthropic/API": {
+      "official_name": "Anthropic API",
+      "owner": "Anthropic",
+      "website": "https://platform.claude.com/",
+      "description": "Anthropic API MCP client (used when MCP is driven through Anthropic API / SDK beta MCP features)"
+    },
+    "Anthropic/ClaudeAI": {
+      "official_name": "Claude.ai",
+      "owner": "Anthropic",
+      "website": "https://claude.ai",
+      "description": "Claude.ai website"
+    },
     "antigravity-client": {
       "official_name": "Google Antigravity",
       "website": "https://antigravity.google"
@@ -56,6 +68,12 @@
       "official_name": "Cline",
       "description": "Cline VS Code extension MCP client.",
       "website": "https://cline.bot/"
+    },
+    "CodeRabbit": {
+      "official_name": "CodeRabbit",
+      "owner": "CodeRabbit",
+      "website": "https://www.coderabbit.ai/",
+      "description": "AI code review product"
     },
     "Codex": {
       "official_name": "OpenAI Codex",
@@ -201,6 +219,11 @@
     "my-awesome-client": {
       "official_name": "Go SDK example",
       "description": "Placeholder client name used in Go SDK documentation."
+    },
+    "openai-mcp": {
+      "official_name": "OpenAI/ChatGPT MCP connector",
+      "owner": "OpenAI",
+      "website": "https://openai.com/"
     },
     "opencode": {
       "official_name": "Opencode",
