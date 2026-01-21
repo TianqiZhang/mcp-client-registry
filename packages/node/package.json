@@ -4,6 +4,10 @@
   "description": "Community registry of MCP clientInfo.name values mapped to official client names and metadata.",
   "license": "MIT",
   "author": "MCP Client Registry contributors",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/TianqiZhang/mcp-client-registry"
+  },
   "main": "index.js",
   "types": "index.d.ts",
   "files": [
