@@ -28,7 +28,7 @@ This registry contains **61** MCP clients.
 | claude-code | Claude Code | Anthropic | [https://claude.com/product/claude-code](https://claude.com/product/claude-code) |
 | Cline | Cline |  | [https://cline.bot/](https://cline.bot/) |
 | CodeRabbit | CodeRabbit | CodeRabbit | [https://www.coderabbit.ai/](https://www.coderabbit.ai/) |
-| Codex | OpenAI Codex |  | [https://openai.com/codex](https://openai.com/codex) |
+| codex-mcp-client | OpenAI Codex |  | [https://openai.com/codex](https://openai.com/codex) |
 | com.raycast.macos | Raycast |  | [https://www.raycast.com](https://www.raycast.com) |
 | continue-cli-client | Continue CLI Client |  | [https://www.continue.dev/](https://www.continue.dev/) |
 | continue-client | Continue |  |  |

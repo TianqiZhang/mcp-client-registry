@@ -75,10 +75,10 @@
       "url": "https://www.coderabbit.ai/",
       "description": "AI code review product"
     },
-    "Codex": {
+    "codex-mcp-client": {
       "official_name": "OpenAI Codex",
       "aliases": [
-        "codex-mcp-client"
+        "codex-cli"
       ],
       "url": "https://openai.com/codex"
     },
