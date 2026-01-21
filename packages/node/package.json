@@ -1,6 +1,6 @@
 {
   "name": "mcp-client-registry",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "Community registry of MCP clientInfo.name values mapped to official client names and metadata.",
   "license": "MIT",
   "author": "MCP Client Registry contributors",
