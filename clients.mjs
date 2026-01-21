@@ -70,6 +70,31 @@ function validateClientEntry(key, entry) {
   }
 }
 
+function validateAliases(clients) {
+  const keys = new Set(Object.keys(clients));
+  const aliasToClient = new Map();
+
+  for (const [key, entry] of Object.entries(clients)) {
+    if (!entry.aliases || !Array.isArray(entry.aliases)) {
+      continue;
+    }
+
+    for (const alias of entry.aliases) {
+      // Check if alias is also a key in clients
+      if (keys.has(alias)) {
+        fail(`Alias "${alias}" of client "${key}" is also a key in clients.json.`);
+      }
+
+      // Check if alias is used by another client
+      if (aliasToClient.has(alias)) {
+        fail(`Alias "${alias}" is used by multiple clients: "${aliasToClient.get(alias)}" and "${key}".`);
+      }
+
+      aliasToClient.set(alias, key);
+    }
+  }
+}
+
 function sortClients(clients) {
   const sortedKeys = Object.keys(clients).sort((a, b) => a.localeCompare(b));
   const sorted = {};
@@ -251,6 +276,7 @@ data.clients = sortClients(data.clients);
 for (const [key, entry] of Object.entries(data.clients)) {
   validateClientEntry(key, entry);
 }
+validateAliases(data.clients);
 
 await writeClients(data, raw);
 await updateReadme(data.clients);
