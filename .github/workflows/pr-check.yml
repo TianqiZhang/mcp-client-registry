@@ -1,0 +1,26 @@
+name: Pull Request Check
+
+on:
+  pull_request:
+
+jobs:
+  build-check:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 24
+
+      - name: Validate registry
+        run: node clients.mjs
+
+      - name: Ensure generated files are up to date
+        run: git diff --exit-code
+
+      - name: Pack npm package
+        run: npm pack --dry-run
+        working-directory: packages/node
