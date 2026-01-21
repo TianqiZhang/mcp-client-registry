@@ -70,6 +70,11 @@ function validateClientEntry(key, entry) {
   }
 }
 
+/**
+ * Validates that aliases are unique and don't conflict with client keys.
+ * @param {Object} clients - The clients object from clients.json
+ * @throws {Error} Exits with error if validation fails
+ */
 function validateAliases(clients) {
   const keys = new Set(Object.keys(clients));
   const aliasToClient = new Map();
@@ -80,6 +85,11 @@ function validateAliases(clients) {
     }
 
     for (const alias of entry.aliases) {
+      // Skip invalid aliases (should already be caught by validateClientEntry)
+      if (typeof alias !== "string" || alias.trim() === "") {
+        continue;
+      }
+
       // Check if alias is also a key in clients
       if (keys.has(alias)) {
         fail(`Alias "${alias}" of client "${key}" is also a key in clients.json.`);
