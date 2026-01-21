@@ -72,8 +72,8 @@ function validateClientEntry(key, entry) {
 
 /**
  * Validates that aliases are unique and don't conflict with client keys.
+ * Exits the process with an error message if validation fails.
  * @param {Object} clients - The clients object from clients.json
- * @throws {Error} Exits with error if validation fails
  */
 function validateAliases(clients) {
   const keys = new Set(Object.keys(clients));
