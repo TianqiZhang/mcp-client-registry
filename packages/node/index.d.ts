@@ -6,8 +6,8 @@ export type MCPClientEntry = {
   official_name: string;
   /** The owner or organization behind the client */
   owner?: string;
-  /** Website or homepage URL for the client */
-  website?: string;
+  /** URL for the client's website or homepage */
+  url?: string;
   /** Brief description of the client's purpose or features */
   description?: string;
   /** Alternative names or identifiers that can be used to look up this client */

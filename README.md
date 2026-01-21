@@ -9,7 +9,9 @@ A community-maintained map of MCP `clientinfo.name` values to official client na
 
 <!-- BEGIN CLIENTS TABLE -->
 
-| clientinfo.name | official_name | owner | website |
+This registry contains **61** MCP clients.
+
+| clientinfo.name | official_name | owner | url |
 | --- | --- | --- | --- |
 | @librechat/api-client | LibreChat |  | [https://www.librechat.ai](https://www.librechat.ai) |
 | @n8n/n8n-nodes-langchain.mcpClientTool | N8N MCP Client |  | [https://n8n.io](https://n8n.io) |
@@ -64,7 +66,7 @@ A community-maintained map of MCP `clientinfo.name` values to official client na
 | replit-workspace | Replit |  | [https://replit.com](https://replit.com) |
 | Roo Code | Roo Code |  |  |
 | spring-ai-mcp-client | Spring AI MCP Client |  |  |
-| test-client | Smithery test client |  |  |
+| test-client | Smithery test & playground | Smithery |  |
 | Trae | Trae | ByteDance | [https://www.trae.ai/](https://www.trae.ai/) |
 | Visual Studio Code | Visual Studio Code | Microsoft | [https://code.visualstudio.com](https://code.visualstudio.com) |
 | warp | Warp |  |  |
@@ -88,7 +90,7 @@ Example:
     "cursor-vscode": {
       "official_name": "Cursor",
       "owner": "Anysphere",
-      "website": "https://www.cursor.com",
+      "url": "https://www.cursor.com",
       "description": "AI-powered coding IDE based on VS Code.",
       "tags": ["coding-agent", "ide", "vscode-fork"],
       "aliases": ["cursor", "Cursor"]
@@ -101,7 +103,7 @@ Example:
 
 - `official_name` (string, required)
 - `owner` (string, optional)
-- `website` (string URL, optional)
+- `url` (string URL, optional)
 - `description` (string, optional)
 - `aliases` (array of strings, optional)
 - `tags` (array of strings, optional)
@@ -112,7 +114,7 @@ The key under `clients` must equal the MCP `clientinfo.name`. If a client has ot
 
 1. Add or update an entry in `clients.json`.
 2. Keep entries in alphabetical order by key.
-3. Prefer official sources for `website`.
+3. Prefer official sources for `url`.
 4. Only add aliases that are known to appear in the wild.
 
 ## Maintenance script

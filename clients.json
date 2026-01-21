@@ -3,51 +3,51 @@
     "@librechat/api-client": {
       "official_name": "LibreChat",
       "description": "LibreChat MCP client.",
-      "website": "https://www.librechat.ai"
+      "url": "https://www.librechat.ai"
     },
     "@n8n/n8n-nodes-langchain.mcpClientTool": {
       "official_name": "N8N MCP Client",
-      "website": "https://n8n.io"
+      "url": "https://n8n.io"
     },
     "Alpic": {
       "official_name": "Alpic",
-      "website": "https://alpic.ai"
+      "url": "https://alpic.ai"
     },
     "amp-mcp-client": {
       "official_name": "AmpCode",
-      "website": "https://ampcode.com"
+      "url": "https://ampcode.com"
     },
     "Anthropic/API": {
       "official_name": "Anthropic API",
       "owner": "Anthropic",
-      "website": "https://platform.claude.com/",
+      "url": "https://platform.claude.com/",
       "description": "Anthropic API MCP client (used when MCP is driven through Anthropic API / SDK beta MCP features)"
     },
     "Anthropic/ClaudeAI": {
       "official_name": "Claude.ai",
       "owner": "Anthropic",
-      "website": "https://claude.ai",
+      "url": "https://claude.ai",
       "description": "Claude.ai website"
     },
     "antigravity-client": {
       "official_name": "Google Antigravity",
-      "website": "https://antigravity.google"
+      "url": "https://antigravity.google"
     },
     "apify-mcp-client": {
       "official_name": "Apify MCP Client",
-      "website": "https://apify.com/jiri.spilka/tester-mcp-client"
+      "url": "https://apify.com/jiri.spilka/tester-mcp-client"
     },
     "arcade": {
       "official_name": "Arcade",
-      "website": "https://arcade.dev"
+      "url": "https://arcade.dev"
     },
     "ChatGPT": {
       "official_name": "ChatGPT",
-      "website": "https://chatgpt.com"
+      "url": "https://chatgpt.com"
     },
     "Cherry Studio": {
       "official_name": "Cherry Studio",
-      "website": "https://www.cherry-ai.com"
+      "url": "https://www.cherry-ai.com"
     },
     "claude-ai": {
       "official_name": "Claude Desktop",
@@ -56,23 +56,23 @@
       "aliases": [
         "claude-desktop"
       ],
-      "website": "https://claude.ai"
+      "url": "https://claude.ai"
     },
     "claude-code": {
       "official_name": "Claude Code",
       "owner": "Anthropic",
       "description": "Claude Code MCP client.",
-      "website": "https://claude.com/product/claude-code"
+      "url": "https://claude.com/product/claude-code"
     },
     "Cline": {
       "official_name": "Cline",
       "description": "Cline VS Code extension MCP client.",
-      "website": "https://cline.bot/"
+      "url": "https://cline.bot/"
     },
     "CodeRabbit": {
       "official_name": "CodeRabbit",
       "owner": "CodeRabbit",
-      "website": "https://www.coderabbit.ai/",
+      "url": "https://www.coderabbit.ai/",
       "description": "AI code review product"
     },
     "Codex": {
@@ -80,15 +80,15 @@
       "aliases": [
         "codex-mcp-client"
       ],
-      "website": "https://openai.com/codex"
+      "url": "https://openai.com/codex"
     },
     "com.raycast.macos": {
       "official_name": "Raycast",
-      "website": "https://www.raycast.com"
+      "url": "https://www.raycast.com"
     },
     "continue-cli-client": {
       "official_name": "Continue CLI Client",
-      "website": "https://www.continue.dev/"
+      "url": "https://www.continue.dev/"
     },
     "continue-client": {
       "official_name": "Continue",
@@ -96,12 +96,12 @@
     },
     "crush": {
       "official_name": "Crush",
-      "website": "https://github.com/charmbracelet/crush"
+      "url": "https://github.com/charmbracelet/crush"
     },
     "cursor-vscode": {
       "official_name": "Cursor",
       "owner": "Anysphere",
-      "website": "https://www.cursor.com",
+      "url": "https://www.cursor.com",
       "description": "AI-powered coding IDE based on VS Code.",
       "tags": [
         "coding-agent",
@@ -118,7 +118,7 @@
     },
     "dust-mcp-client": {
       "official_name": "Dust",
-      "website": "https://dust.tt"
+      "url": "https://dust.tt"
     },
     "emacs": {
       "official_name": "Emacs",
@@ -129,7 +129,7 @@
     },
     "etherassist-mcp-client": {
       "official_name": "EtherAssist",
-      "website": "https://www.etherassist.ai/",
+      "url": "https://www.etherassist.ai/",
       "description": "AI agent designed for IT professionals and departments"
     },
     "example-client": {
@@ -138,7 +138,7 @@
     },
     "factory-cli": {
       "official_name": "Factory CLI",
-      "website": "https://github.com/factory-ai/factory-cli"
+      "url": "https://github.com/factory-ai/factory-cli"
     },
     "gemini-cli": {
       "official_name": "Gemini CLI",
@@ -147,21 +147,21 @@
         "gemini-cli-mcp-client"
       ],
       "description": "Gemini CLI MCP client (assumed name).",
-      "website": "https://geminicli.com/"
+      "url": "https://geminicli.com/"
     },
     "gitguardian": {
       "official_name": "GitGuardian",
-      "website": "https://www.gitguardian.com"
+      "url": "https://www.gitguardian.com"
     },
     "github-copilot-developer": {
       "official_name": "GitHub Copilot CLI",
       "description": "GitHub Copilot CLI, and GitHub Copilot Coding Agent in github.com.",
-      "website": "https://github.com/features/copilot/cli"
+      "url": "https://github.com/features/copilot/cli"
     },
     "goose": {
       "official_name": "Goose",
       "description": "Goose autonomous agent MCP client.",
-      "website": "https://block.github.io/goose"
+      "url": "https://block.github.io/goose"
     },
     "helix": {
       "official_name": "Helix",
@@ -169,7 +169,7 @@
     },
     "Jan-Streamable-Client": {
       "official_name": "Jan AI",
-      "website": "https://jan.ai"
+      "url": "https://jan.ai"
     },
     "jetbrains-ai-assistant-client": {
       "official_name": "JetBrains AI Assistant",
@@ -178,7 +178,7 @@
     },
     "JetBrains-IU-copilot-intellij": {
       "official_name": "JetBrains AI Assistant",
-      "website": "https://plugins.jetbrains.com/plugin/22282-jetbrains-ai-assistant"
+      "url": "https://plugins.jetbrains.com/plugin/22282-jetbrains-ai-assistant"
     },
     "JetBrains-IU/copilot-intellij": {
       "official_name": "GitHub Copilot for IntelliJ",
@@ -186,19 +186,19 @@
     },
     "JetBrains-JBC-copilot-intellij": {
       "official_name": "JetBrains AI Assistant with GitHub Copilot",
-      "website": "https://plugins.jetbrains.com/plugin/22282-jetbrains-ai-assistant"
+      "url": "https://plugins.jetbrains.com/plugin/22282-jetbrains-ai-assistant"
     },
     "Kilo-Code": {
       "official_name": "Kilo Code",
-      "website": "https://github.com/Kilo-Org/kilocode"
+      "url": "https://github.com/Kilo-Org/kilocode"
     },
     "lobehub-mcp-client": {
       "official_name": "LobeHub",
-      "website": "https://lobehub.com"
+      "url": "https://lobehub.com"
     },
     "make-app-mcp-client": {
       "official_name": "Make MCP Client",
-      "website": "https://www.make.com"
+      "url": "https://www.make.com"
     },
     "mcp": {
       "official_name": "Python SDK default",
@@ -225,7 +225,7 @@
     },
     "Mistral": {
       "official_name": "Mistral AI: Le Chat",
-      "website": "https://chat.mistral.ai"
+      "url": "https://chat.mistral.ai"
     },
     "my-awesome-client": {
       "official_name": "Go SDK example",
@@ -234,15 +234,15 @@
     "openai-mcp": {
       "official_name": "OpenAI/ChatGPT MCP connector",
       "owner": "OpenAI",
-      "website": "https://openai.com/"
+      "url": "https://openai.com/"
     },
     "opencode": {
       "official_name": "Opencode",
-      "website": "https://opencode.ai"
+      "url": "https://opencode.ai"
     },
     "Postman-Client": {
       "official_name": "Postman",
-      "website": "https://postman.com/downloads"
+      "url": "https://postman.com/downloads"
     },
     "q-cli": {
       "official_name": "Amazon Q CLI",
@@ -251,11 +251,11 @@
       ],
       "owner": "Amazon",
       "description": "Amazon Q CLI MCP client (assumed name).",
-      "website": "https://github.com/aws/amazon-q-developer-cli"
+      "url": "https://github.com/aws/amazon-q-developer-cli"
     },
     "replit-workspace": {
       "official_name": "Replit",
-      "website": "https://replit.com"
+      "url": "https://replit.com"
     },
     "Roo Code": {
       "official_name": "Roo Code",
@@ -276,7 +276,7 @@
     "Trae": {
       "official_name": "Trae",
       "owner": "ByteDance",
-      "website": "https://www.trae.ai/",
+      "url": "https://www.trae.ai/",
       "description": "Trae AI IDE"
     },
     "Visual Studio Code": {
@@ -286,7 +286,7 @@
       "aliases": [
         "Visual Studio Code - Insiders"
       ],
-      "website": "https://code.visualstudio.com"
+      "url": "https://code.visualstudio.com"
     },
     "warp": {
       "official_name": "Warp",
@@ -296,15 +296,15 @@
       "official_name": "Windsurf",
       "owner": "Codeium",
       "description": "Windsurf IDE MCP client.",
-      "website": "https://codeium.com/windsurf"
+      "url": "https://codeium.com/windsurf"
     },
     "windsurf-client": {
       "official_name": "Windsurf Editor",
-      "website": "https://codeium.com/windsurf"
+      "url": "https://codeium.com/windsurf"
     },
     "Xcode-copilot-xcode": {
       "official_name": "GitHub Copilot for Xcode",
-      "website": "https://github.com/github/CopilotForXcode"
+      "url": "https://github.com/github/CopilotForXcode"
     },
     "Zed": {
       "official_name": "Zed",
@@ -312,7 +312,7 @@
       "aliases": [
         "zed"
       ],
-      "website": "https://zed.dev"
+      "url": "https://zed.dev"
     }
   }
 }

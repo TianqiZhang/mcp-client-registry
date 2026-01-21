@@ -7,7 +7,7 @@ const REQUIRED_FIELDS = ["official_name"];
 const KNOWN_FIELDS = new Set([
   "official_name",
   "owner",
-  "website",
+  "url",
   "description",
   "tags",
   "aliases",
@@ -37,8 +37,8 @@ function validateClientEntry(key, entry) {
     fail(`Client "${key}" has invalid "owner".`);
   }
 
-  if ("website" in entry && (typeof entry.website !== "string" || entry.website.trim() === "")) {
-    fail(`Client "${key}" has invalid "website".`);
+  if ("url" in entry && (typeof entry.url !== "string" || entry.url.trim() === "")) {
+    fail(`Client "${key}" has invalid "url".`);
   }
 
   if (
@@ -85,17 +85,20 @@ function escapeTableValue(value) {
 
 function buildClientsTable(clients) {
   const lines = [];
-  lines.push("| clientinfo.name | official_name | owner | website |");
+  const clientCount = Object.keys(clients).length;
+  lines.push(`This registry contains **${clientCount}** MCP client${clientCount === 1 ? "" : "s"}.`);
+  lines.push("");
+  lines.push("| clientinfo.name | official_name | owner | url |");
   lines.push("| --- | --- | --- | --- |");
 
   for (const key of Object.keys(clients).sort((a, b) => a.localeCompare(b))) {
     const entry = clients[key];
     const officialName = entry.official_name ?? "";
     const owner = entry.owner ?? "";
-    const website = entry.website ? `[${entry.website}](${entry.website})` : "";
+    const url = entry.url ? `[${entry.url}](${entry.url})` : "";
 
     lines.push(
-      `| ${escapeTableValue(key)} | ${escapeTableValue(officialName)} | ${escapeTableValue(owner)} | ${escapeTableValue(website)} |`
+      `| ${escapeTableValue(key)} | ${escapeTableValue(officialName)} | ${escapeTableValue(owner)} | ${escapeTableValue(url)} |`
     );
   }
 
@@ -191,8 +194,8 @@ async function promptForEntry(existingKeys) {
     console.log('owner: The company or organization behind the client (optional).');
     const owner = (await rl.question("owner (optional): ")).trim();
 
-    console.log('website: Official website URL (optional).');
-    const website = (await rl.question("website (optional): ")).trim();
+    console.log('url: Official URL (optional).');
+    const url = (await rl.question("url (optional): ")).trim();
 
     console.log('description: Short description of the client (optional).');
     const description = (await rl.question("description (optional): ")).trim();
@@ -212,7 +215,7 @@ async function promptForEntry(existingKeys) {
     const entry = {
       official_name: officialName,
       ...(owner ? { owner } : {}),
-      ...(website ? { website } : {}),
+      ...(url ? { url } : {}),
       ...(description ? { description } : {}),
       ...(tags.length ? { tags } : {}),
       ...(aliases.length ? { aliases } : {}),
