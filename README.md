@@ -32,8 +32,10 @@ A community-maintained map of MCP `clientinfo.name` values to official client na
 | continue-client | Continue |  |  |
 | crush | Crush |  | [https://github.com/charmbracelet/crush](https://github.com/charmbracelet/crush) |
 | cursor-vscode | Cursor | Anysphere | [https://www.cursor.com](https://www.cursor.com) |
+| docker-mcp-gateway | Docker MCP Gateway |  |  |
 | dust-mcp-client | Dust |  | [https://dust.tt](https://dust.tt) |
 | emacs | Emacs |  |  |
+| etherassist-mcp-client | EtherAssist |  | [https://www.etherassist.ai/](https://www.etherassist.ai/) |
 | example-client | Example Client |  |  |
 | factory-cli | Factory CLI |  | [https://github.com/factory-ai/factory-cli](https://github.com/factory-ai/factory-cli) |
 | gemini-cli | Gemini CLI | Google | [https://geminicli.com/](https://geminicli.com/) |
@@ -59,9 +61,11 @@ A community-maintained map of MCP `clientinfo.name` values to official client na
 | opencode | Opencode |  | [https://opencode.ai](https://opencode.ai) |
 | Postman-Client | Postman |  | [https://postman.com/downloads](https://postman.com/downloads) |
 | q-cli | Amazon Q CLI | Amazon | [https://github.com/aws/amazon-q-developer-cli](https://github.com/aws/amazon-q-developer-cli) |
+| replit-workspace | Replit |  | [https://replit.com](https://replit.com) |
 | Roo Code | Roo Code |  |  |
 | spring-ai-mcp-client | Spring AI MCP Client |  |  |
 | test-client | Smithery test client |  |  |
+| Trae | Trae | ByteDance | [https://www.trae.ai/](https://www.trae.ai/) |
 | Visual Studio Code | Visual Studio Code | Microsoft | [https://code.visualstudio.com](https://code.visualstudio.com) |
 | warp | Warp |  |  |
 | Windsurf | Windsurf | Codeium | [https://codeium.com/windsurf](https://codeium.com/windsurf) |

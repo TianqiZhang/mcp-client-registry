@@ -113,6 +113,9 @@
         "cursor"
       ]
     },
+    "docker-mcp-gateway": {
+      "official_name": "Docker MCP Gateway"
+    },
     "dust-mcp-client": {
       "official_name": "Dust",
       "website": "https://dust.tt"
@@ -123,6 +126,11 @@
       "aliases": [
         "Eglot"
       ]
+    },
+    "etherassist-mcp-client": {
+      "official_name": "EtherAssist",
+      "website": "https://www.etherassist.ai/",
+      "description": "AI agent designed for IT professionals and departments"
     },
     "example-client": {
       "official_name": "Example Client",
@@ -194,7 +202,10 @@
     },
     "mcp": {
       "official_name": "Python SDK default",
-      "description": "Default client name from the MCP Python SDK."
+      "description": "Default client name from the MCP Python SDK.",
+      "aliases": [
+        "mcp-python-client"
+      ]
     },
     "mcp-cli": {
       "official_name": "MCP CLI",
@@ -242,6 +253,10 @@
       "description": "Amazon Q CLI MCP client (assumed name).",
       "website": "https://github.com/aws/amazon-q-developer-cli"
     },
+    "replit-workspace": {
+      "official_name": "Replit",
+      "website": "https://replit.com"
+    },
     "Roo Code": {
       "official_name": "Roo Code",
       "aliases": [
@@ -254,8 +269,15 @@
       "description": "Default client name for Spring AI MCP client starter."
     },
     "test-client": {
-      "official_name": "Smithery test client",
+      "official_name": "Smithery test & playground",
+      "owner": "Smithery",
       "description": "Automated test/health-check client name used by Smithery."
+    },
+    "Trae": {
+      "official_name": "Trae",
+      "owner": "ByteDance",
+      "website": "https://www.trae.ai/",
+      "description": "Trae AI IDE"
     },
     "Visual Studio Code": {
       "official_name": "Visual Studio Code",
